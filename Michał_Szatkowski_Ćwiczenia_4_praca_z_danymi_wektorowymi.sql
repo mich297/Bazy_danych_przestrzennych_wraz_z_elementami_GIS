@@ -3,7 +3,7 @@ SELECT count(*) as liczba_budynkow FROM popp, majrivers WHERE Contains(Buffer(ma
 
 CREATE TABLE tableB AS SELECT popp.PKUID, popp.Geometry, popp.cat, popp.F_CODEDESC, popp.F_CODE, popp.TYPE FROM popp, majrivers WHERE Contains(Buffer(majrivers.Geometry, 100000), popp.Geometry) AND popp.F_CODEDESC='Building'; 
 
---2 (Zad5)
+--2(Zad5)
 CREATE TABLE airportsNew (
     NAME VARCHAR(80),
     Geometry BLOB,
